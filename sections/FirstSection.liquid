@@ -10,15 +10,15 @@
 {% render 'FirstSnipped' %}
 
 <div class="all_products">
-  {% if product.available %}
   {% for product in collections.all.products %}
+  {% if product.available %}
     
     <div>
       {{ product.title }}
       <img src="{{ product.featured_image | img_url: '300x300' }}">
     </div>  
-  {% endfor %}
   {% endif %}
+  {% endfor %}
 </div>
 
 {% schema %}
