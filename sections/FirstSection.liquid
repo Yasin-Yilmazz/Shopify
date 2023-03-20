@@ -5,7 +5,11 @@
   <img src="https://picsum.photos/200/300">
 </div>
 {% render 'FirstSnipped' %}
-
+{% for product in all_products %}
+<div>
+  {{ product.title }}
+</div>  
+{% endfor %}
 {% schema %}
   {
     "name": "Section name",
