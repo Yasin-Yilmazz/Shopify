@@ -8,9 +8,7 @@
 {% for product in collections.all.products %}
 <div>
   {{ product.title }}
-  <span>
-    {{ product.images }}
-  </span>
+  <img src="{{ product.images }}">
 </div>  
 {% endfor %}
 {% schema %}
