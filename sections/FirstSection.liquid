@@ -10,15 +10,28 @@
 {% render 'FirstSnipped' %}
 
 <div class="all_products">
-  {% for product in collections.all.products %}
-  {% if product.available %}
-    
-    <div>
-      {{ product.title }}
-      <img src="{{ product.featured_image | img_url: '300x300' }}">
-    </div>  
+  {% if section.settings.stok %}
+    {% for product in collections.all.products %}
+      
+      {% if product.available %}
+        
+        <div>
+          {{ product.title }}
+          <img src="{{ product.featured_image | img_url: '300x300' }}">
+        </div>  
+      {% endif %}
+    {% endfor %}
+
+  {% else %}
+      {% for product in collections.all.products %}
+      
+        <div>
+          {{ product.title }}
+          <img src="{{ product.featured_image | img_url: '300x300' }}">
+        </div>  
+        
+    {% endfor %}
   {% endif %}
-  {% endfor %}
 </div>
 
 {% schema %}
