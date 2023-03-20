@@ -6,14 +6,17 @@
 </div>
 <div>
   <img src="https://picsum.photos/200/300">
-</div>
+</div class="all_products">
 {% render 'FirstSnipped' %}
-{% for product in collections.all.products %}
-<div class="all_products">
+<div>
+  {% for product in collections.all.products %}
+<div >
   {{ product.title }}
   <img src="{{ product.featured_image | img_url: '300x300' }}">
 </div>  
 {% endfor %}
+</div>
+
 {% schema %}
   {
     "name": "Section name",
