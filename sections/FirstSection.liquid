@@ -9,6 +9,10 @@
 </div>
 {% render 'FirstSnipped' %}
 
+ <div>
+    {{ section.deneme.label }}   
+ </div>
+
 <div class="all_products">
   {% if section.settings.stok %}
     {% for product in collections.all.products %}
