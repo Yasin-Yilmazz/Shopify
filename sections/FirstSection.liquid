@@ -1,17 +1,19 @@
 {{ 'first_section.css' | asset_url | stylesheet_tag }}
 
-
-<div>
-  lorem ipsum test 123 123 123 
+<div class="container">
+  <div>
+    lorem ipsum test 123 123 123 
+  </div>
+  <div>
+    <img src="https://picsum.photos/200/300">
+  </div>
+  {% render 'FirstSnipped' %}
+  
+   <h1>
+      {{ section.settings.deneme }}
+   </h1>
 </div>
-<div>
-  <img src="https://picsum.photos/200/300">
-</div>
-{% render 'FirstSnipped' %}
 
- <h1>
-    {{ section.settings.deneme }}
- </h1>
 
 <div class="all_products">
   {% if section.settings.stok %}
