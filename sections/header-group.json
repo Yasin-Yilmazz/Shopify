@@ -35,18 +35,10 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "57632276-0de8-463e-9b16-e8c38d7d9f76": {
-      "type": "FirstSection",
-      "settings": {
-        "deneme": "test deneme",
-        "stok": false
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "57632276-0de8-463e-9b16-e8c38d7d9f76"
+    "header"
   ]
 }
